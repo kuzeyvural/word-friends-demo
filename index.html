@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word Friends</title>
+    <meta name="description" content="Arkadaşlar arası kelime paylaşım demo sitesi." />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">Word Friends</div>
+      <nav class="nav">
+        <a href="#dashboard">Dashboard</a>
+        <a href="#friends">Arkadaşlar</a>
+        <a href="#words">Kelimeler</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Dil öğrenme ağı</p>
+          <h1>Arkadaşlarınla kelime paylaş.</h1>
+          <p class="subtitle">
+            Her kullanıcı kendi dilinde kelime gönderir, arkadaşları da öğrenir ve
+            kelime hafızasını güçlendirir.
+          </p>
+
+          <div class="cta-row">
+            <button class="primary">Hemen Başla</button>
+            <button class="secondary">Daha Fazla</button>
+          </div>
+        </div>
+
+        <div class="card highlight-card">
+          <h3>Bugünkü kelime</h3>
+          <div class="word-row">
+            <span>hello</span>
+            <span>→</span>
+            <span>merhaba</span>
+          </div>
+          <p class="muted">Anlam: selam / merhaba</p>
+        </div>
+      </section>
+
+      <section id="dashboard" class="stats-grid">
+        <article class="card">
+          <h3>Profil</h3>
+          <div class="avatar">A</div>
+          <p><strong>Kullanıcı:</strong> Ali</p>
+          <p><strong>Dil:</strong> Türkçe</p>
+        </article>
+
+        <article class="card">
+          <h3>İstatistik</h3>
+          <div class="stats">
+            <div>
+              <strong>32</strong>
+              <span>Kelimeler</span>
+            </div>
+            <div>
+              <strong>12</strong>
+              <span>Arkadaş</span>
+            </div>
+            <div>
+              <strong>5</strong>
+              <span>Günlük hedef</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Son kelimeler</h3>
+          <ul class="list">
+            <li>hello → merhaba</li>
+            <li>friend → arkadaş</li>
+            <li>book → kitap</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="friends" class="two-col">
+        <article class="card">
+          <h3>Arkadaş ekle</h3>
+          <div class="input-row">
+            <input id="friendInput" type="text" placeholder="Arkadaş kullanıcı adı" />
+            <button id="addFriendBtn" class="primary small">Ekle</button>
+          </div>
+          <ul id="friendsList" class="list compact">
+            <li>Ayşe</li>
+            <li>Mehmet</li>
+            <li>Elif</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Kelime gönder</h3>
+          <label>Arkadaş seç</label>
+          <select id="friendSelect">
+            <option>Ayşe</option>
+            <option>Mehmet</option>
+            <option>Elif</option>
+          </select>
+
+          <label>Kelime</label>
+          <input id="wordInput" type="text" placeholder="Örn: goodbye" />
+
+          <label>Kaynak dil</label>
+          <select id="sourceLang">
+            <option value="en">İngilizce</option>
+            <option value="tr">Türkçe</option>
+            <option value="de">Almanca</option>
+          </select>
+
+          <button id="sendWordBtn" class="primary full">Gönder</button>
+        </article>
+      </section>
+
+      <section id="words" class="card history-panel">
+        <h3>Kelime geçmişi</h3>
+        <div class="word-history" id="wordHistory">
+          <div class="history-item">
+            <strong>hello</strong>
+            <span>→</span>
+            <span>merhaba</span>
+            <small>Ayşe</small>
+          </div>
+          <div class="history-item">
+            <strong>friend</strong>
+            <span>→</span>
+            <span>arkadaş</span>
+            <small>Mehmet</small>
+          </div>
+          <div class="history-item">
+            <strong>book</strong>
+            <span>→</span>
+            <span>kitap</span>
+            <small>Elif</small>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
